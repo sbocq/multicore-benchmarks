@@ -5,7 +5,7 @@ A collection of multicore benchmarks
 ## Runtimes/Languages/Libraries
 
 - [JVM/Scala/Molecule](https://github.com/molecule-labs/molecule#molecule)
-- [Go](http://golang.org/)
+- [Google Go](http://golang.org/)
 
 ## Latest Results
 
@@ -33,7 +33,7 @@ Conf. ACS/IEEE AICCSA (2003).](http://cedric.cnam.fr/fichiers/RC474.pdf)
 - Molecule: [ChameneosReduxWord.scala](https://github.com/sbocq/multicore-benchmarks/blob/master/JVM/src/main/scala/benchmarks/molecule/ChameneosReduxWord.scala), [ChameneosReduxCore.scala](https://github.com/sbocq/multicore-benchmarks/blob/master/JVM/src/main/scala/benchmarks/molecule/ChameneosReduxCore.scala)
 - Go: [thread-ring.go](ttps://github.com/sbocq/multicore-benchmarks/blob/master/Go/chameneos-redux.go)
 
-### Prime-Sieve
+### Prime-Sieve (N=150000)
 
 **Ref:** [Kahn, G., and Macqueen, D. Coroutines and Networks of Parallel Processes. In Information Processing ’77: Proceedings of the IFIP Congress. North-Holland, 1977, pp. 993–998.](Coroutines and Networks of Parallel Processes)
 
@@ -43,7 +43,7 @@ Conf. ACS/IEEE AICCSA (2003).](http://cedric.cnam.fr/fichiers/RC474.pdf)
 - Molecule: [PrimeSieve.scala](https://github.com/sbocq/multicore-benchmarks/blob/master/JVM/src/main/scala/benchmarks/molecule/PrimeSieve.scala)
 - Go: [prime-sieve.go](ttps://github.com/sbocq/multicore-benchmarks/blob/master/Go/prime-sieve.go)
 
-_TODO: Update this Figure because Go computed all the primes less than 100000 while Molecule computed all the ones less than 150000_
+_TODO: Update this Figure because Go computed all the primes less than 100000 while Molecule computed all the ones less than 150000_.
 
 ## Running The Benchmarks
 
@@ -59,4 +59,4 @@ All the `.dat` files with the timings and the Gnuplot files will be generated in
 
 ### Google Go
 
-The Google Go benchmarks are located in the `Go` directory. They are run using the `./runAll.sh` script that will generate `.dat` files with the timings in the same directory. Unfortunately, contrariliy to the JVM benchmarks, other columns like the throughput must be computed by hand.
+The Google Go benchmarks are located in the `Go` directory. They are run using the `./runAll.sh` script that will generate `.dat` files with the timings in the same directory. Unfortunately, contrariliy to the JVM benchmarks, other columns like the throughput must be computed by manually.
