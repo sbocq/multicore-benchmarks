@@ -10,7 +10,7 @@ import( "os" )
 
 // Send the sequence 2, 3, 4, ... to channel 'ch'.
 func Generate(ch chan<- int) {
-	for i := 2; i <= 100000; i++ {
+	for i := 2; i <= 150000; i++ {
 		ch <- i  // Send 'i' to channel 'ch'.
 	}
 }
@@ -33,7 +33,7 @@ func Sieve() {
 	for {
 		prime := <-ch;
 		print(prime, "\n");
-                if prime == 99991 {os.Exit(1)}
+                if prime == 149993 {os.Exit(1)}
 		ch1 := make(chan int,50);
 		go Filter(ch, ch1, prime);
 		ch = ch1

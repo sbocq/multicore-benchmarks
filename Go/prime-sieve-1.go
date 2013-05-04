@@ -10,7 +10,7 @@ import( "os" )
 
 // Send the sequence 2, 3, 4, ... to channel 'ch'.
 func Generate(ch chan<- int) {
-	for i := 2; i <= 100000; i++ {
+	for i := 2; i <= 150000; i++ {
 		ch <- i  // Send 'i' to channel 'ch'.
 	}
 }
@@ -28,13 +28,13 @@ func Filter(in <-chan int, out chan<- int, prime int) {
 
 // The prime sieve: Daisy-chain Filter processes together.
 func Sieve() {
-	ch := make(chan int, 50);  // Create a new channel.
+	ch := make(chan int, 1);  // Create a new channel.
 	go Generate(ch);  // Start Generate() as a subprocess.
 	for {
 		prime := <-ch;
 		print(prime, "\n");
-                if prime == 99991 {os.Exit(1)}
-		ch1 := make(chan int,50);
+                if prime == 149993 {os.Exit(1)}
+		ch1 := make(chan int,1);
 		go Filter(ch, ch1, prime);
 		ch = ch1
 	}
