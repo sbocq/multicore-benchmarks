@@ -10,5 +10,6 @@ set xtics 1
 #set output "thread-ring.eps"
 
 plot '../molecule/thread-ring/molecule-word_wcfj.dat' using 1:4:($4*$3)/100 with errorlines title "Molecule-word",\
-'../go/threadring%throughput.dat' using 1:3 with linespoint title "Go"
+'../go/go-results-1.1/threadring%throughput.dat' using 1:3 with linespoint title "Go 1.1",\
+'../go/go-results-1.0.3/threadring%throughput.dat' using 1:3 with linespoint title "Go 1.0.3"
 pause -1
