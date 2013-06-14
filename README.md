@@ -59,4 +59,4 @@ All the `.dat` files with the timings and the Gnuplot files will be generated in
 
 ### Google Go
 
-The Google Go benchmarks are located in the `Go` directory. They are run using the `./runAll.sh` script that will generate `.dat` files with the timings in the same directory. Unfortunately, contrariliy to the JVM benchmarks, other columns like the throughput must be computed by manually.
+The Google Go benchmarks are located in the `Go` directory. They are run using the `./runAll.sh` script that will generate `.dat` files with the timings in the same directory. Unfortunately, contrariliy to the JVM benchmarks, other columns like the throughput must be post-processed using a spreadsheet program like Gnumeric.
